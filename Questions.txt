@@ -1,0 +1,20 @@
+
+
+#What does this mean?
+DEBUG <- FALSE 
+
+
+#should we run the SAVE, LOAD functions mannually all the time=?
+
+#what is fdx file type?
+SAVE(dfx=df)
+
+What does this do?
+#restrict 
+df <- df[,c("ADMIN_ID","GDPCAPLN")]
+#from "m6practice_varcreation_outcomes_ex1.R"
+
+
+#echo
+source(paste0(DO,input,sep=""), echo=FALSE, max=1000)
+

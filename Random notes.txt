@@ -1,0 +1,7 @@
+1. do both exercises (in R/ Stata as you wish) from "part_x_models_metrics.pdf" - by email till the end of the weekend.
+2.Please make yourself familiar with the R commands "iv_robust", "felm", and "tidysynth".
+	https://cran.r-project.org/web/packages/estimatr/estimatr.pdf
+	https://cran.r-project.org/web/packages/lfe/lfe.pdf
+	https://cran.r-project.org/web/packages/tidysynth/readme/README.html
+3.  I kindly ask you to fill in the revised survey about your RP. "feedback_Pitch your project (v2).xlsx"
+

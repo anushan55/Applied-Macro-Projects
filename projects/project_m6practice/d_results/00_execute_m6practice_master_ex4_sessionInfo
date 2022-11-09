@@ -1,0 +1,21 @@
+
+> sessionInfo()
+R version 4.1.1 (2021-08-10)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 22000)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United States.1252  LC_CTYPE=English_United States.1252    LC_MONETARY=English_United States.1252 LC_NUMERIC=C                           LC_TIME=English_United States.1252    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] stargazer_5.2.3 ggplot2_3.3.5   haven_2.4.3     dplyr_1.0.10    AER_1.2-10      survival_3.2-11 sandwich_3.0-1  lmtest_0.9-40   zoo_1.8-9       car_3.1-1       carData_3.0-5   rstudioapi_0.14
+
+loaded via a namespace (and not attached):
+ [1] pillar_1.6.4     compiler_4.1.1   forcats_0.5.1    tools_4.1.1      lifecycle_1.0.3  tibble_3.1.6     gtable_0.3.0     lattice_0.20-44  pkgconfig_2.0.3  rlang_1.0.6      Matrix_1.5-1     cli_3.4.1        withr_2.4.3      generics_0.1.2   vctrs_0.5.0      hms_1.1.1        grid_4.1.1       tidyselect_1.1.1 glue_1.5.1       R6_2.5.1         fansi_0.5.0      Formula_1.2-4    purrr_0.3.4      magrittr_2.0.1   scales_1.1.1     ellipsis_0.3.2   splines_4.1.1    abind_1.4-5      colorspace_2.0-2 utf8_1.2.2       munsell_0.5.0    crayon_1.4.2    
+
+> sink()

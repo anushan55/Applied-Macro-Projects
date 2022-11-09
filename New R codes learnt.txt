@@ -1,0 +1,10 @@
+#rename the column headings
+colnames(df) <- sub("^hjlogyl$","GDPCAPLN",colnames(df))
+
+
+#used to eliminate the missing rows
+df <- df[complete.cases(df),]
+
+
+#Export charts
+stargazer(reg1,reg2,type="text")
