@@ -26,8 +26,6 @@
 ################################################################################################################+
 # INTRO ####
 
-setwd(HOME)
-
 #clear console
 cat("\014")
 
@@ -45,7 +43,7 @@ MAINNAME <- sub(".*/|^[^/]*$", "", MAINNAME)
 MAINNAME <- substr(MAINNAME,1,nchar(MAINNAME)-2) #cut off .R
 
 
-HOME <- "E:/Documents/Applied Macro/Projects/projects/" #here: path to 'projects' dir 
+HOME <- "D:/Documents/Applied Macro/Projects/projects/" #here: path to 'projects' dir 
 DO <- paste0(HOME,"/project_m6practice/c_program/") #here: path to folder with R.code
 
 ######################+
@@ -98,5 +96,5 @@ source(paste0(DO,input,sep=""), echo=TRUE, max=1000)
 
 #############################################+
 # figures ####
-input <- 'm6practice_analysis_figures_ex4.R'
-source(paste0(DO,input,sep=""), echo=TRUE, max=1000)
+#input <- 'm6practice_analysis_figures_ex5.R'
+#source(paste0(DO,input,sep=""), echo=TRUE, max=1000)
