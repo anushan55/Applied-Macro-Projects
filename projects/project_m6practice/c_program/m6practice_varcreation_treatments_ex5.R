@@ -20,19 +20,17 @@ gc()
 
 ################################################################################################################+
 # MAIN PART ####
-df<-LOAD(dfinput=paste0(DFBASE,"_ex4"))
+df<-LOAD(dfinput=paste0(DFBASE,"_ex5"))
 
-#Create variable
-df$v<-df$V/df$L
+#create variable 
+colnames(df) <- sub("^edyrs$","edu",colnames(df))
 
-df$lnv<-ln(df$v)
+df$edu2<-(df$edu)^2
 
-
-
+#rename
+#colnames(df) <- sub("urateb","UNEMRATE",colnames(df))
 
 #restrict 
-df <- df[,c("ADMIN_ID","lnv")]
+df <- df[,c("ADMIN_ID","edu", "edu2")]
 
 SAVE(dfx=df)
-
-

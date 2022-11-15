@@ -20,19 +20,18 @@ gc()
 
 ################################################################################################################+
 # MAIN PART ####
-df<-LOAD(dfinput=paste0(DFBASE,"_ex4"))
-
-#Create variable
-df$v<-df$V/df$L
-
-df$lnv<-ln(df$v)
+df<-LOAD(dfinput=paste0(DFMAIN,"_ex5"),pattdir=A)
 
 
+# run regression equation 
+reg1<- lm(lnwage ~ edu, data = df)
+reg2<- lm(lnwage ~ edu+edu2, data = df)
+summary (reg1) 
+summary(reg2)
 
+#export
+stargazer(reg1,reg2,type="latex")
+stargazer(reg1,reg2,type="text")
 
-#restrict 
-df <- df[,c("ADMIN_ID","lnv")]
-
-SAVE(dfx=df)
 
 

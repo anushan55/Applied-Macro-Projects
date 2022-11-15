@@ -20,19 +20,11 @@ gc()
 
 ################################################################################################################+
 # MAIN PART ####
-df<-LOAD(dfinput=paste0(DFBASE,"_ex4"))
+df1 <- LOAD(dfinput="m6practice_varcreation_outcomes_ex5")
+df2 <- LOAD(dfinput="m6practice_varcreation_treatments_ex5")
+#...
 
-#Create variable
-df$v<-df$V/df$L
-
-df$lnv<-ln(df$v)
-
-
-
-
-#restrict 
-df <- df[,c("ADMIN_ID","lnv")]
+#merge
+df <- merge(df1,df2,by="ADMIN_ID") 
 
 SAVE(dfx=df)
-
-

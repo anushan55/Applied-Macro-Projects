@@ -21,7 +21,7 @@ gc()
 
 ################################################################################################################+
 # MAIN PART ####
-df<-LOAD(dfinput=paste0(DFBASE,"_ex4"))
+df<-LOAD(dfinput=paste0(DFMERGE,"_ex4"))
 
 #restrict cols -> already in varcreation section given only vars of specific type are saved for merge
 

@@ -20,8 +20,8 @@ gc()
 
 ################################################################################################################+
 # MAIN PART ####
-df1 <- LOAD(dfinput="m6practice_varcreation_outcomes_ex3")
-df2 <- LOAD(dfinput="m6practice_varcreation_treatments_ex3")
+df1 <- LOAD(dfinput="m6practice_varcreation_outcomes_ex4")
+df2 <- LOAD(dfinput="m6practice_varcreation_treatments_ex4")
 #...
 
 #merge

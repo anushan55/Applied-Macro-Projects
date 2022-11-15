@@ -18,21 +18,17 @@ if ( !grepl("00_execute",MAINNAME_check)) {
 #release unused memory 
 gc()
 
+
 ################################################################################################################+
 # MAIN PART ####
-df<-LOAD(dfinput=paste0(DFBASE,"_ex4"))
+df<-LOAD(dfinput=paste0(DFMERGE,"_ex5"))
 
-#Create variable
-df$v<-df$V/df$L
+#restrict cols -> already in varcreation section given only vars of specific type are saved for merge
 
-df$lnv<-ln(df$v)
+#restrict to non-missing rows
+dim(df)
+df <- df[complete.cases(df),]
+dim(df)
 
-
-
-
-#restrict 
-df <- df[,c("ADMIN_ID","lnv")]
-
-SAVE(dfx=df)
-
-
+#save 
+SAVE(dfx=df,namex=MAINNAME,pattdir=A)

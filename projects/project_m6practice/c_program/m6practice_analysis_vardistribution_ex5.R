@@ -18,21 +18,22 @@ if ( !grepl("00_execute",MAINNAME_check)) {
 #release unused memory 
 gc()
 
+
 ################################################################################################################+
 # MAIN PART ####
-df<-LOAD(dfinput=paste0(DFBASE,"_ex4"))
+df<-LOAD(dfinput=paste0(DFMAIN,"_ex5"),pattdir=A)
 
-#Create variable
-df$v<-df$V/df$L
+#summarystats
+summary(df)
 
-df$lnv<-ln(df$v)
+dim(df)
+head(df,20)
+tail(df)
 
+#restrict to non-missing rows
+dim(df)
+df <- df[complete.cases(df),]
+dim(df)
 
-
-
-#restrict 
-df <- df[,c("ADMIN_ID","lnv")]
-
-SAVE(dfx=df)
-
-
+#save 
+SAVE(dfx=df,namex=MAINNAME,pattdir=A)

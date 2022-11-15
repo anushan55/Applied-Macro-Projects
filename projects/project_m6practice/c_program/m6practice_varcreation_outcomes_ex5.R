@@ -20,18 +20,18 @@ gc()
 
 ################################################################################################################+
 # MAIN PART ####
-df<-LOAD(dfinput=paste0(DFBASE,"_ex4"))
+df<-LOAD(dfinput=paste0(DFBASE,"_ex5"))
+
+View(df)
 
 #Create variable
-df$v<-df$V/df$L
 
-df$lnv<-ln(df$v)
-
+colnames(df) <- sub("^logwphy$","lnwage",colnames(df))
 
 
 
 #restrict 
-df <- df[,c("ADMIN_ID","lnv")]
+df <- df[,c("ADMIN_ID","lnwage")]
 
 SAVE(dfx=df)
 

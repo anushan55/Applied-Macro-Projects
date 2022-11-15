@@ -20,19 +20,13 @@ gc()
 
 ################################################################################################################+
 # MAIN PART ####
-df<-LOAD(dfinput=paste0(DFBASE,"_ex4"))
 
-#Create variable
-df$v<-df$V/df$L
+# Import dataset
+setwd(A)
+df <- read_dta("Labour_Force_SA_SALDRU_1993.dta")
 
-df$lnv<-ln(df$v)
+#create original row id
+df$ADMIN_ID <- seq.int(nrow(df))
 
-
-
-
-#restrict 
-df <- df[,c("ADMIN_ID","lnv")]
-
+#save as.rda
 SAVE(dfx=df)
-
-

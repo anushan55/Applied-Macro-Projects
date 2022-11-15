@@ -1,4 +1,4 @@
-#  Cob Douglas model
+#  Non linear education model on wages
 
 #df dataframe
 #l list
@@ -25,6 +25,8 @@
 
 ################################################################################################################+
 # INTRO ####
+
+setwd(HOME)
 
 #clear console
 cat("\014")
@@ -57,16 +59,16 @@ source(paste0(DO,input,sep=""), echo=TRUE, max=1000)
 
 #############################################+
 # read-in + basic editing of raw data: create base df ####
-input <- 'm6practice_databasics_ex4.R'
+input <- 'm6practice_databasics_ex5.R'
 source(paste0(DO,input,sep=""), echo=TRUE, max=1000)
 
 
 #############################################+
 # # variable grouping, selection, creation ####
-input <- "m6practice_varcreation_outcomes_ex4.R"
+input <- "m6practice_varcreation_outcomes_ex5.R"
 source(paste0(DO,input,sep=""), echo=TRUE, max=1000)
 
-input <- 'm6practice_varcreation_treatments_ex4.R'
+input <- 'm6practice_varcreation_treatments_ex5.R'
 source(paste0(DO,input,sep=""), echo=TRUE, max=1000)
 
 # input <- 'm6practice_varcreation_controls_ex1.R'
@@ -74,24 +76,24 @@ source(paste0(DO,input,sep=""), echo=TRUE, max=1000)
 
 #...
 
-input <- 'm6practice_varcreation_merge_ex4.R'
+input <- 'm6practice_varcreation_merge_ex5.R'
 source(paste0(DO,input,sep=""), echo=TRUE, max=1000)
 
 #############################################+
 # main & subsample creation ####
-input <- 'm6practice_samplecreation_main_ex4.R'
+input <- 'm6practice_samplecreation_main_ex5.R'
 source(paste0(DO,input,sep=""), echo=TRUE, max=1000)
 
 
 
 #############################################+
-# var distribution checks (inherent and coding quality) ####
-#input<- 'm6practice_analysis_vardistribution_ex1.R'
-#source(paste0(DO,input,sep=""), echo = TRUE, max=1000)
+var distribution checks (inherent and coding quality) ####
+input<- 'm6practice_analysis_vardistribution_ex5.R'
+source(paste0(DO,input,sep=""), echo = TRUE, max=1000)
 
 #############################################+
 # regressions ####
-input <- 'm6practice_analysis_regression_ex4.R'
+input <- 'm6practice_analysis_regression_ex5.R'
 source(paste0(DO,input,sep=""), echo=TRUE, max=1000)
 
 #############################################+

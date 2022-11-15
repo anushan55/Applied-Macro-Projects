@@ -1,6 +1,9 @@
 ############################
 # packages and libraries ####
 
+#install.packages("SciViews")
+library("SciViews")
+
 #install.packages("AER") #run only once
 library(AER)
 
@@ -14,7 +17,7 @@ library(haven)
 #install.packages("ggplot2")
 library(ggplot2)
 
-install.packages("stargazer")
+#install.packages("stargazer")
 library(stargazer)
 
 ############################
