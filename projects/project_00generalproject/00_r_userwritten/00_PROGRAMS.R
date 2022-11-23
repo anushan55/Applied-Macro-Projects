@@ -20,6 +20,10 @@ library(ggplot2)
 #install.packages("stargazer")
 library(stargazer)
 
+
+#install.packages("plm")
+library("plm")
+
 ############################
 # myfunctions ####
 source(paste0(ADO,"CLEARCOND.R"), echo=TRUE, max=1000)

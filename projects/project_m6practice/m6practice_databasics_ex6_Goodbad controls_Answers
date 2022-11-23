@@ -1,0 +1,228 @@
+Scenario 1 - Education, Income, and Parental Education
+
+Q1 - It is a good control. Model 1 from Cinelli et al (2022). 
+
+Q2 - Regression results
+
+===========================================================================
+                                      Dependent variable:                  
+                    -------------------------------------------------------
+                                            income                         
+                                (1)                         (2)            
+---------------------------------------------------------------------------
+edu                          6.643***                    5.235***          
+                              (0.141)                     (0.198)          
+                                                                           
+edu_parents                                              2.852***          
+                                                          (0.284)          
+                                                                           
+Constant                     -1.875***                   -1.870***         
+                              (0.201)                     (0.200)          
+                                                                           
+---------------------------------------------------------------------------
+Observations                  10,000                      10,000           
+R2                             0.182                       0.190           
+Adjusted R2                    0.182                       0.190           
+Residual Std. Error     20.108 (df = 9998)          20.008 (df = 9997)     
+F Statistic         2,218.749*** (df = 1; 9998) 1,171.098*** (df = 2; 9997)
+===========================================================================
+Note:                                           *p<0.1; **p<0.05; ***p<0.01
+
+
+Q3
+  Model (1) without controls:
+    One year increase in education increases income by 6.643 units. 
+    
+  Model (2) with education of parents as a control:
+    One year increase in education increases income by only 5.235 units.
+    whereas one additional year of education of the parents increases the child's income by 2.852 units
+    
+  The coefficient for the education of the child has reduced after incorporating the education of the parents. 
+  This shows that the parents education is a variable that causes the education of the child to change as well as improve the child's income prospects.Thereby in the absence of the control, the effect of parents education is shown through the child's education on the dependent variable (income). 
+  
+--------------------------------------------------------------------------------
+  
+Scenario 2 -  Education, Income, and Parental Education
+
+Q1 - Neutral control. Same as model 8. Higher age means more income but does not affect education levels. 
+
+Q2- 
+
+=====================================================================
+                                   Dependent variable:               
+                    -------------------------------------------------
+                                         income                      
+                             (1)                      (2)            
+---------------------------------------------------------------------
+edu                        0.489*                   0.438**          
+                           (0.267)                  (0.208)          
+                                                                     
+age                                                1.604***          
+                                                    (0.020)          
+                                                                     
+Constant                 163.083***                95.861***         
+                           (0.266)                  (0.863)          
+                                                                     
+---------------------------------------------------------------------
+Observations               10,000                   10,000           
+R2                         0.0003                    0.392           
+Adjusted R2                0.0002                    0.392           
+Residual Std. Error  26.623 (df = 9998)       20.765 (df = 9997)     
+F Statistic         3.353* (df = 1; 9998) 3,221.883*** (df = 2; 9997)
+=====================================================================
+Note:                                     *p<0.1; **p<0.05; ***p<0.01
+  
+  
+
+Q3
+
+Model (1) without controls:
+  One year increase in education increases income by 0,489 units
+  
+Model (2) with age as a control:
+    One year increase in education increases income by 0,438 units.
+    whereas being one year older increases the income by 1.604 units.
+    
+  However, adding age as a control has minimal impact on the unbaisness of education level coefficient on income. This suggests that the control neutral in reducing the biasness. But it is good to have the control as it reduces the standard errors and improves the precision of the overall model (R2 improves).
+  
+--------------------------------------------------------------------------------  
+  
+ Scenario 3 -  Education, Income, and Work Type
+ 
+ Q1 
+ 
+ Bad control. Model 16. Education affects the innate ability of a person. Ability is mediator factor that links education and income. More income is paid to higher ability individuals. Further, a highly able individual would mostly be employed in a white collar job which also improves the income. Therefore, having the type of work creates over control bias. 
+ 
+ Q2 
+ 
+ =========================================================================
+                                     Dependent variable:                 
+                    -----------------------------------------------------
+                                           income                        
+                               (1)                        (2)            
+-------------------------------------------------------------------------
+edu                         1.792***                   -0.257***         
+                             (0.077)                    (0.075)          
+                                                                         
+work_type                                              8.759***          
+                                                        (0.149)          
+                                                                         
+Constant                    1.549***                   -2.841***         
+                             (0.076)                    (0.100)          
+                                                                         
+-------------------------------------------------------------------------
+Observations                  9,998                      9,998           
+R2                            0.052                      0.295           
+Adjusted R2                   0.052                      0.295           
+Residual Std. Error     7.645 (df = 9996)          6.590 (df = 9995)     
+F Statistic         544.663*** (df = 1; 9996) 2,094.468*** (df = 2; 9995)
+=========================================================================
+Note:                                         *p<0.1; **p<0.05; ***p<0.01
+
+
+Model (1) without controls:
+  One year increase in education increases income by 1,792 units
+  
+Model (2) with age as a control:
+    One year increase in education reduces income by 0,257 units.
+    whereas a white collar job type increases the income by 8.759 units.
+    
+Adding the work type as a control takes most of the effect of education on to the work type variable. Therefore, the control has completely taken all effects of education away from income and made even the direction of the casual effect from positive to negative. 
+
+---------------------------------------------------------------------------------
+
+ Scenario 4 -  Education, Income, and Politics
+ 
+ 
+ Q1 - Bad control.Model 16. Political interest is a varible that is an effect of higher education but it does not affect incomes in any way.Therefore, it creates a selection bias as the effect after contoling will only be mostly among individual with lower education. 
+ 
+ Q2
+ 
+ =======================================================================
+                                    Dependent variable:                
+                    ---------------------------------------------------
+                                          income                       
+                               (1)                       (2)           
+-----------------------------------------------------------------------
+edu                         1.100***                  -0.257***        
+                             (0.071)                   (0.075)         
+                                                                       
+interest_politics                                     5.759***         
+                                                       (0.149)         
+                                                                       
+Constant                      0.048                   -2.841***        
+                             (0.071)                   (0.100)         
+                                                                       
+-----------------------------------------------------------------------
+Observations                 10,000                     9,998          
+R2                            0.024                     0.150          
+Adjusted R2                   0.023                     0.150          
+Residual Std. Error     7.069 (df = 9998)         6.590 (df = 9995)    
+F Statistic         240.797*** (df = 1; 9998) 882.566*** (df = 2; 9995)
+=======================================================================
+Note:                                       *p<0.1; **p<0.05; ***p<0.01
+
+
+Q3
+
+Model (1) without controls:
+  One year increase in education increases income by 1,100 units
+  
+Model (2) with age as a control:
+    One year increase in education reduces income by 0,257 units.
+    whereas a person with interest in politics increases the income by an additional 5,759 units.
+    
+Adding interest in politics as a control biases the relationship between education and income as the dummy variable now groups out the highly educated politically interested individuals out of the model to estimate the edu coefficient. Hence, the negative coefficient with controls as opposed to a positive one without the controls. 
+
+
+
+--------------------------------------------------------------------------------
+ Scenario 5 -  Education, Income, and Happiness
+
+============================================================================
+                                      Dependent variable:                   
+                    --------------------------------------------------------
+                                        income.happiness                    
+                                (1)                         (2)             
+----------------------------------------------------------------------------
+schooling                    5.083***                     1.992***          
+                              (0.079)                     (0.056)           
+                                                                            
+income.income                                             6.059***          
+                                                          (0.050)           
+                                                                            
+Constant                       0.128                       0.032            
+                              (0.079)                     (0.050)           
+                                                                            
+----------------------------------------------------------------------------
+Observations                  10,000                       10,000           
+R2                             0.291                       0.716            
+Adjusted R2                    0.291                       0.716            
+Residual Std. Error      7.901 (df = 9998)           5.002 (df = 9997)      
+F Statistic         4,112.709*** (df = 1; 9998) 12,605.160*** (df = 2; 9997)
+============================================================================
+Note:                                            *p<0.1; **p<0.05; ***p<0.01
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+Note: I was not able to load the rda files as the LOAD function changed the names of the columns to as follows;
+  
+[1] "m6practice_databasics_ex6_Education.parents.edu_parents" "m6practice_databasics_ex6_Education.parents.edu"        
+[3] "m6practice_databasics_ex6_Education.parents.u"           "m6practice_databasics_ex6_Education.parents.income"     
+[5] "m6practice_databasics_ex6_Education.parents.ADMIN_ID" 
+  
+  
+  
+  
+  
+  
+  
+  
+  
