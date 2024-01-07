@@ -1,0 +1,48 @@
+Call:
+lm(formula = ln_n ~ ln_tmine + ln_t + ln_pie, data = df, design = df_design)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.10881 -0.29195  0.04114  0.38693  1.75873 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  7.609772   0.044909   169.4   <2e-16 ***
+ln_tmine     1.634296   0.014372   113.7   <2e-16 ***
+ln_t        -3.104023   0.017412  -178.3   <2e-16 ***
+ln_pie      -0.495877   0.004969   -99.8   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5412 on 220048 degrees of freedom
+Multiple R-squared:  0.221,	Adjusted R-squared:  0.221 
+F-statistic: 2.081e+04 on 3 and 220048 DF,  p-value: < 2.2e-16
+
+
+Regression results with survey design on Log model
+==============================================================
+                                      Dependent variable:     
+                                  ----------------------------
+                                              ln_n            
+                                       (1)            (2)     
+--------------------------------------------------------------
+ln_tmine                             1.634***      1.634***   
+                                     (0.014)        (0.014)   
+                                                              
+ln_t                                -3.104***      -3.104***  
+                                     (0.017)        (0.017)   
+                                                              
+ln_pie                              -0.496***      -0.496***  
+                                     (0.005)        (0.005)   
+                                                              
+Constant                             7.610***      7.610***   
+                                     (0.045)        (0.045)   
+                                                              
+--------------------------------------------------------------
+Observations                         220,052        220,052   
+R2                                    0.221          0.221    
+Adjusted R2                           0.221          0.221    
+Residual Std. Error (df = 220048)     0.541          0.541    
+F Statistic (df = 3; 220048)      20,810.040***  20,810.040***
+==============================================================
+Note:                              *p<0.1; **p<0.05; ***p<0.01
