@@ -1,0 +1,44 @@
+# TARGET: Create a sample of main model without India 
+# INDATA: 
+# OUTDATA/ OUTPUT:
+
+################################################################################################################+
+# All countries ####
+
+#clear gobal environment of all but uppercase objects (globals, myfunctions, scalars)
+CLEARCOND()
+
+#adapt scriptname/ rfilename and extension if NOT executed in batch mode
+MAINNAME <- current_filename()
+MAINNAME <- sub(".*/|^[^/]*$", "", MAINNAME)
+MAINNAME <- substr(MAINNAME,1,nchar(MAINNAME)-2) #cut off .R
+######################+
+#release unused memory 
+gc()
+
+
+################################################################################################################+
+# Load Main Data ####
+df<-LOAD(dfinput=paste0(DFMERGE, "_control"))
+
+
+#Filter out only one country for all phases
+dim(df)
+df <- subset(df, !(country_code %in% "IA"))
+
+unique(df$country_code)
+
+#restrict to non-missing rows
+dim(df)
+df <- df[complete.cases(df),]
+dim(df)
+unique(df$country_code)
+
+#save 
+SAVE(dfx=df, namex = MAINNAME, pattdir = A)
+
+
+#####################################################################################################################
+
+
+

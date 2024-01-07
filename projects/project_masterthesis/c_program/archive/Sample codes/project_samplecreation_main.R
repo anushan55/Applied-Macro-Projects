@@ -1,0 +1,110 @@
+# TARGET: 
+# INDATA: 
+# OUTDATA/ OUTPUT:
+
+################################################################################################################+
+# All countries ####
+
+#clear gobal environment of all but uppercase objects (globals, myfunctions, scalars)
+CLEARCOND()
+
+#adapt scriptname/ rfilename and extension if NOT executed in batch mode
+MAINNAME <- current_filename()
+MAINNAME <- sub(".*/|^[^/]*$", "", MAINNAME)
+MAINNAME <- substr(MAINNAME,1,nchar(MAINNAME)-2) #cut off .R
+######################+
+#release unused memory 
+gc()
+
+
+################################################################################################################+
+# Load Data ####
+df<-LOAD(dfinput=paste0(DFMERGE))
+
+
+#restrict to non-missing rows
+dim(df)
+df <- df[complete.cases(df),]
+dim(df)
+
+count(df,id)
+
+#save 
+SAVE(dfx=df, namex = "project_samplecreation_main_all", pattdir = A)
+
+################################################################################################################+
+# Developing Countries ####
+
+#clear gobal environment of all but uppercase objects (globals, myfunctions, scalars)
+CLEARCOND()
+
+#adapt scriptname/ rfilename and extension if NOT executed in batch mode
+MAINNAME <- current_filename()
+MAINNAME <- sub(".*/|^[^/]*$", "", MAINNAME)
+MAINNAME <- substr(MAINNAME,1,nchar(MAINNAME)-2) #cut off .R
+######################+
+#release unused memory 
+gc()
+
+df<-LOAD(dfinput=paste0(DFMERGE))
+
+#create subset without high income countries
+df<- subset(df, df$id!=4 & df$id!=8 & df$id!=9 & df$id!=10 & df$id!=13 & df$id!=18 & df$id!=19 & df$id!=25 & df$id!=26
+           & df$id!=30 & df$id!=31 & df$id!=32 & df$id!=43 & df$id!=44 & df$id!=45 & df$id!=48 & df$id!=54 & df$id!=55
+          & df$id!=57 & df$id!=59 & df$id!=62 & df$id!=69 & df$id!=73 & df$id!=75 & df$id!=77 & df$id!=80 & df$id!=83
+         & df$id!=84 & df$id!=85 & df$id!=88 & df$id!=94 & df$id!=95 & df$id!=96 & df$id!=102 & df$id!=105 & df$id!=106
+        & df$id!=107 & df$id!=108 & df$id!=110 & df$id!=118 & df$id!=131 & df$id!=132 & df$id!=134 & df$id!=135 & df$id!=136
+       & df$id!=143 & df$id!=145 & df$id!=147 & df$id!=148 & df$id!=151 & df$id!=154 & df$id!=158 & df$id!=164 & df$id!=165
+      & df$id!=166 & df$id!=168 & df$id!=177 & df$id!=181 & df$id!=185 & df$id!=186)
+
+
+
+#restrict to non-missing rows
+dim(df)
+df <- df[complete.cases(df),]
+dim(df)
+
+count(df,id)
+
+#save 
+SAVE(dfx=df, namex = "project_samplecreation_main_developing", pattdir = A)
+
+################################################################################################################+
+# Developed Countries ####
+
+#clear gobal environment of all but uppercase objects (globals, myfunctions, scalars)
+CLEARCOND()
+
+#adapt scriptname/ rfilename and extension if NOT executed in batch mode
+MAINNAME <- current_filename()
+MAINNAME <- sub(".*/|^[^/]*$", "", MAINNAME)
+MAINNAME <- substr(MAINNAME,1,nchar(MAINNAME)-2) #cut off .R
+######################+
+#release unused memory 
+gc()
+
+#load data
+df<-LOAD(dfinput=paste0(DFMERGE))
+
+#create subset with high income countries 
+df<- subset(df, df$id=="4" | df$id=="8" | df$id=="9" | df$id=="10" | df$id=="13" | df$id=="18" | df$id=="19" | df$id=="25" | df$id=="26"
+            | df$id=="30" | df$id=="31" | df$id=="32" | df$id=="43" | df$id=="44" | df$id=="45" | df$id=="48" | df$id=="54" | df$id=="55"
+            | df$id=="57" | df$id=="59" | df$id=="62" | df$id=="69" | df$id=="73" | df$id=="75" | df$id=="77" | df$id=="80" | df$id=="83"
+            | df$id=="84" | df$id=="85" | df$id=="88" | df$id=="94" | df$id=="95" | df$id=="96" | df$id=="102" | df$id=="105" | df$id=="106"
+            | df$id=="107" | df$id=="108" | df$id=="110" | df$id=="118" | df$id=="131" | df$id=="132" | df$id=="134" | df$id=="135" | df$id=="136"
+            | df$id=="143" | df$id=="145" | df$id=="147" | df$id=="148" | df$id=="151" | df$id=="154" | df$id=="158" | df$id=="164" | df$id=="165"
+            | df$id=="166" | df$id=="168" | df$id=="177" | df$id=="181" | df$id=="185" | df$id=="186")
+
+
+#restrict to non-missing rows
+dim(df)
+df <- df[complete.cases(df),]
+dim(df)
+
+count(df,id)
+
+#save 
+SAVE(dfx=df, namex = "project_samplecreation_main_developed", pattdir = A)
+
+
+#SAVE(dfx=df,namex=MAINNAME,,pattdir=A)
